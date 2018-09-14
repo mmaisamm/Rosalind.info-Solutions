@@ -1,0 +1,21 @@
+# Given: A DNA string s of length at most 1000 nt.
+# Return: Four integers (separated by spaces) counting the respective number of times that the symbols 'A', 'C', 'G', and 'T' occur in s.
+
+a = dict()
+a['A'] = 0
+a['C'] = 0
+a['G'] = 0
+a['T'] = 0
+
+filename = raw_input('Enter filename:')
+with open(filename,'r') as f:
+	b = f.read()
+print(b)
+
+for c in b:
+    if c not in a:
+        a[c] = 1
+    else:
+        a[c] = a[c] + 1
+
+print a['A'],a['C'],a['G'],a['T']

@@ -1,0 +1,16 @@
+#METHOD 1
+k=3
+n=35
+a=1
+b=1
+for x in range(0,n-1):
+	a,b=b,k*a+b
+print(a)
+
+
+#METHOD 2
+def fib(n, k):
+    previous1, previous2 = 1, 1
+    for i in range(2, n):
+        previous1, previous2 = previous2, previous1 * k + previous2
+    return previous2

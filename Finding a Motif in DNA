@@ -1,0 +1,12 @@
+# Given: Two DNA strings s and t (each of length at most 1 kbp).
+# Return: All locations of t as a substring of s.
+
+s = raw_input("What is the string?")
+t = raw_input("What is the substring?")
+results = []
+l = len(t)
+
+for a in range(len(s) - l):
+    if s[a:a+l] == t:
+        results.append(a + 1)
+print ' '.join(map(str, results))

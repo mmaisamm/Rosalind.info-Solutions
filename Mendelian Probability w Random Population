@@ -1,0 +1,11 @@
+#Given: Three positive integers k, m, and n, representing a population containing k+m+n organisms: 
+#    k individuals are homozygous dominant for a factor, m are heterozygous, and n are homozygous recessive.
+#Return: The probability that two randomly selected mating organisms will produce an individual possessing 
+#    a dominant allele (and thus displaying the dominant phenotype). Assume that any two organisms can mate.
+
+k = 22
+m = 21
+n = 18
+
+probDominant = 1.0 - ((n*(n-1) + (m*n) + 0.25*m*(m-1))/((k+m+n)*(k+m+n-1)))
+print probDominant
